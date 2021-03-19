@@ -3,7 +3,7 @@ Keycloak playground
 
 ## Overview
 
-![overview](https://github.com/wtakase/keycloak-playground/raw/master/img/keycloak_playground.png "overview")
+![overview](https://github.com/wtakase/keycloak-playground/blob/main/img/keycloak_playground.png "overview")
 
 
 ## Prerequirement
@@ -65,7 +65,7 @@ curl -XGET http://localhost:8888/test/admin -H "Authorization: bearer YOUR_ACCES
 * Access `http://localhost:8080` with `keycloak_admin/keycloak_admin`
 
 
-## Save keycloak realm
+## Save Keycloak realm
 
 ```
 docker-compose exec keycloak /opt/jboss/keycloak/bin/standalone.sh \
