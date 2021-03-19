@@ -43,7 +43,7 @@ user03		user03		user,admin
 user04		user04
 ```
 
-## Get access token by curl and hit REST API directory
+## Get access token and hit REST API using curl
 
 ```
 curl -XPOST 'http://localhost:8080/auth/realms/my_realm/protocol/openid-connect/token' \
