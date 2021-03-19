@@ -1,0 +1,9 @@
+{
+  "realm": "my_realm",
+  "bearer-only": true,
+  "auth-server-url": "http://localhost:8080/auth",
+  "ssl-required": "external",
+  "resource": "nodejs-microservice",
+  "use-resource-role-mappings": true,
+  "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAolbJkWNeZj5QtmxdowWJxdtZAfTwJAuTlZ20eIBuoMJZJg8BQ5+HBRMz3o3g9kqvupxKKiuhcnAgxZ8whJbbVNASKHqWvJ3eEkLFReN5HKYQTmKqSixxI+ksONT1WnEeGtD91YL2/200PmxkpTNq9tHCFlqdKETQsi2JXWgaVAYxDaoAfqb++MSIY9RpKtrw6Etd5mNfE+dzzKg4Y3c2OEKlZabqpAkbtmvNYTCiHE1kcf60Ggdz3mHvB0qK9R+6XAjBcGev0PL+otzs5Utu6a55ilmCKs/QWrVdZZ2F6oTasGfCPWdi82vks574Ni7+shqGeRsJKvvF7hm/aH96kwIDAQAB"
+}

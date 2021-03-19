@@ -1,0 +1,46 @@
+dn: dc=example,dc=org
+changetype: add
+objectClass: dcObject
+dc: example
+
+dn: dc=example,dc=org
+changetype: modify
+add: aci
+aci: (targetattr = "userPassword")(version 3.0; acl "self write access to userPassword"; allow (write) userdn = "ldap:///self";)
+aci: (targetattr = "userPassword")(version 3.0; acl "keycloak_binder bind access to userPassword"; allow (compare, search) userdn = "ldap:///uid=keycloak_binder,dc=example,dc=org";)
+aci: (targetattr != "userPassword")(version 3.0; acl "keycloak_binder read access to attributes"; allow (read, search) userdn = "ldap:///uid=keycloak_binder,dc=example,dc=org";)
+
+dn: uid=keycloak_binder,dc=example,dc=org
+changetype: add
+objectClass: account
+objectClass: simpleSecurityObject
+uid: keycloak_binder
+userPassword: {SSHA512}1+ocGhmycA8dH08MbnWhGq9yAl/Of+WRpDHSAngMFlyw0fxIlUwqSx+lfJVXbHG3M6lLkE6x4lMcvHuCCnwI6zzD75DICQss
+
+dn: uid=user01,dc=example,dc=org
+changetype: add
+objectClass: account
+objectClass: simpleSecurityObject
+uid: user01
+userPassword: {SSHA512}dir3APp+2p5I6+pIvmfJB70Yf1Jrz500PpZ601VBSq3FX+abw//enJ46uoiU3bYrLEICXqNLGItnzbmiiSFITtkyOB555RPn
+
+dn: uid=user02,dc=example,dc=org
+changetype:add
+objectClass: account
+objectClass: simpleSecurityObject
+uid: user02
+userPassword: {SSHA512}/OECvWkCHPEKtWrPeq85dStpDP0dN5dL3elbMg2YEDJrctWE+DAbEkZOPl9tOwTI6pNxDOxyQsqP0PpUSBaRjZQi0HDZFyU/
+
+dn: uid=user03,dc=example,dc=org
+changetype:add
+objectClass: account
+objectClass: simpleSecurityObject
+uid: user03
+userPassword: {SSHA512}3KX0cG1p+yUmLaHm1Op7GX/q3tW/cbCDLQMerHQls0k2bageUd9q0b9uAf6lbApZlCVMYY3J6bBzVnRKkwxqLjUl89I3Ocwd
+
+dn: uid=user04,dc=example,dc=org
+changetype:add
+objectClass: account
+objectClass: simpleSecurityObject
+uid: user04
+userPassword: {SSHA512}79Z7HU6zrb8xcDk+dlTfTHTlGvbUkO2ZLWIpHOb89OkPhUPR5+5tATNobk+tkUQzJwiJt4itoZFFLWQ/8JA1tb7vRyvPGKfj
